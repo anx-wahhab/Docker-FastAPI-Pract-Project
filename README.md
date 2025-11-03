@@ -112,7 +112,7 @@ In your AWS EC2 instance’s **Security Group**, add an inbound rule:
 |------|------|---------|
 | Custom TCP | 8501 | Anywhere (0.0.0.0/0) |
 
-### This way anyone from outside computer/system can send request to our EC3 instance or to our endpoint.
+This way anyone from outside computer/system can send request to our EC3 instance or to our endpoint.
 
 ### Visit the app in your browser
 ```
