@@ -80,12 +80,10 @@ sudo systemctl enable docker
 ```
 ⚙️ *Ensures Docker starts automatically after reboot.*
 
-### Add current user to Docker group
+### Add outside server access (in this instance docker hub) to our EC3 instance
 ```bash
 sudo usermod -aG docker $USER
 ```
-👤 *Allows running Docker without using `sudo` (you may need to log out and log back in).*
-
 ---
 
 ## 🐋 Pulling and Running from Docker Hub
@@ -113,6 +111,8 @@ In your AWS EC2 instance’s **Security Group**, add an inbound rule:
 | Type | Port | Source |
 |------|------|---------|
 | Custom TCP | 8501 | Anywhere (0.0.0.0/0) |
+
+### This way anyone from outside computer/system can send request to our EC3 instance or to our endpoint.
 
 ### Visit the app in your browser
 ```
